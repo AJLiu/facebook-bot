@@ -1,0 +1,30 @@
+{
+  "name": "chatbot",
+  "version": "1.0.0",
+  "description": "thonybot chatbot for facebook messenger",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AJLiu/facebook-bot.git"
+  },
+  "keywords": [
+    "facebook",
+    "messenger",
+    "bot",
+    "chatbot"
+  ],
+  "author": "Anthony Liu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AJLiu/facebook-bot/issues"
+  },
+  "homepage": "https://github.com/AJLiu/facebook-bot#readme",
+  "dependencies": {
+    "facebook-chat-api": "^1.0.8",
+    "request": "^2.69.0"
+  }
+}
