@@ -1,0 +1,6 @@
+gifs/
+node_modules/
+
+.db
+
+config.json
