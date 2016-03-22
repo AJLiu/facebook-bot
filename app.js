@@ -15,6 +15,7 @@ var pluginlist = {
   remind: require("./plugins/remind/remind.js"),
   snap: require("./plugins/snap/snap.js"),
   delete: require("./plugins/delete/delete.js"),
+  bitcoin: require("./plugins/bitcoin/bitcoin.js"),
   help: require('./plugins/help/help.js')
 };
 

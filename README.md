@@ -7,7 +7,7 @@ $ git clone https://github.com/AJLiu/facebook-bot
 $ cd facebook-bot
 $ npm install
 ```
-Create a copy of ```config_example.json``` into ```config.json``` and enter in the username and password of a bot facebook account.
+Copy ```config_example.json``` into ```config.json``` and enter in the username and password of a bot facebook account.
 ```
 $ npm start
 ```

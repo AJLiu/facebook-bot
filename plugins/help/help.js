@@ -30,7 +30,7 @@ function findplugin(api, message, pluginlist) {
 }
 
 function listplugins(api, message, pluginlist) {
-  let response = "Hi! I am a bot. Here are a list of plugins activated\n";
+  let response = "Hi! I am a bot. Here is a list of plugins activated\n";
 
   for(let plugin in pluginlist){
     response += "  " + pluginlist[plugin].name + "\n";
