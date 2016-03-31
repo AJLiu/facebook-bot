@@ -9,7 +9,7 @@ module.exports.description = `type ${keyword} {plugin} learn more about that plu
 module.exports.run = (api, message, pluginlist) => {
 
   if (message.body.slice(0, keyword.length) === keyword) {
-    if (message.body.length > keyword.length + 1) {
+    if (message.body.charAt(keyword.length) === ' ') {
       findplugin(api, message, pluginlist);
     } else {
       listplugins(api, message, pluginlist);

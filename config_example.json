@@ -1,5 +1,7 @@
 {
   "giphy": "GIPHY Key (dc6zaTOxFJmzC is the public beta key)",
+  "botid": "botid",
+
   "username": "Facebook email",
   "password": "Facebook password"
 }

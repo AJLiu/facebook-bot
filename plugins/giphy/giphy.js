@@ -13,7 +13,7 @@ module.exports.description = `type ${keyword} [keywords] to get a random gif mat
 module.exports.run = (api, message) => {
 
   if (message.body.slice(0, keyword.length) === keyword) {
-    if (message.body.length > keyword.length + 1) {
+    if (message.body.charAt(keyword.length) === ' ') {
       sendgiphy(api, message);
     } else {
       api.sendMessage(module.exports.description, message.threadID);
@@ -44,7 +44,7 @@ function getgiphy(message, callback) {
   request.get({
     url: 'http://api.giphy.com/v1/gifs/translate',
     qs: {
-      s: message.body.slice(keyword.length+1).replace(" ", "+"),
+      s: message.body.slice(keyword.length + 1).replace(" ", "+"),
       api_key: config.giphy
     }
   }, function(error, response, body) {

@@ -8,7 +8,7 @@ module.exports.description =  `type ${keyword} to say hello world`; //explanatio
 
 module.exports.run = (api, message) => {
   if (message.body.slice(0, keyword.length) === keyword) {
-    if (message.body.length > keyword.length + 1) {
+    if (message.body.charAt(keyword.length) === ' ') {
       helloworld(api, message);
     } else {
       api.sendMessage(module.exports.description, message.threadID);

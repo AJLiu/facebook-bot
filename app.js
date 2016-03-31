@@ -6,17 +6,14 @@ var fs = require('fs');
 var config = require('./config.json');
 
 //Plugins
+var help = require('./plugins/help/help.js');
 var pluginlist = {
   giphy: require('./plugins/giphy/giphy.js'),
   color: require('./plugins/color/color.js'),
   emoji: require('./plugins/emoji/emoji.js'),
   say: require("./plugins/say/say.js"),
-  chatbot: require("./plugins/chatbot/chatbot.js"),
-  remind: require("./plugins/remind/remind.js"),
-  snap: require("./plugins/snap/snap.js"),
-  delete: require("./plugins/delete/delete.js"),
-  bitcoin: require("./plugins/bitcoin/bitcoin.js"),
-  help: require('./plugins/help/help.js')
+  // remind: require("./plugins/remind/remind.js"),
+  chatbot: require("./plugins/chatbot/chatbot.js")
 };
 
 if (!fs.existsSync('gifs')) {
@@ -35,11 +32,10 @@ facebook({
   //Plugins
   api.listen(
     (err, message) => {
-      pluginlist.giphy.run(api, message);
-      pluginlist.color.run(api, message);
-      pluginlist.emoji.run(api, message);
-      pluginlist.say.run(api,message);
-      pluginlist.help.run(api, message, pluginlist);
+      for(let key in pluginlist) {
+        pluginlist[key].run(api, message);
+      }
+      help.run(api, message, pluginlist);
     }
   );
 });

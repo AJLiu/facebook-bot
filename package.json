@@ -25,6 +25,7 @@
   "homepage": "https://github.com/AJLiu/facebook-bot#readme",
   "dependencies": {
     "facebook-chat-api": "^1.0.8",
-    "request": "^2.69.0"
+    "request": "^2.69.0",
+    "xml2js": "^0.4.16"
   }
 }
